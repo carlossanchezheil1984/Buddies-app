@@ -66,12 +66,17 @@ header{
 }
 
 .small-buttons-container{
-  width: 30%;
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 30px ;
 }
 
-
+.link{
+  color : var(--primary);
+  text-decoration: none;
+  text-align: center;
+  margin-right: 44px;
+}
 h1 {
   font-size: 36px;
   line-height: 42px;

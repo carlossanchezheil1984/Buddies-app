@@ -8,8 +8,8 @@ const Header = () => {
                 <div className="logo">bb</div>
 
                 <div className="small-buttons-container">
-                <Button buttonType="small" text="Home" submitBtn="true" />
-                <Button buttonType="small" text="login" submitBtn="true" />
+                <a className="link" href=".">Home</a>
+                <Button buttonType="small" text="Login" submitBtn="true" />
                 </div>
             </div>
 
