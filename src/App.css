@@ -1,0 +1,127 @@
+/*--------------Importing the Roboto Font--------------*/
+
+@font-face {
+  font-family: Roboto;
+  src: url(Roboto-Regular.ttf);
+  font-weight: normal;
+}
+
+/*--------------CSS Variables--------------*/
+
+:root {
+  /*Fonts*/
+  --font: Roboto, sans-serif;
+  
+  /*Font sizes*/
+  --small-text: 12px;
+  --base-text: 16px;
+
+  /*Colors*/
+  --primary: #6F52ED;
+  --dark-primary: #452CAE;
+  --secondary: #A6ACBE;
+  --base: #333333;
+  --light: #F8F8FB;
+  --white: #FFFFFF;
+  --success: #33D69F;
+  --error: #FB3939;
+  
+}
+
+/*--------------Main styles--------------*/
+
+body * {
+  font-family: var(--font);
+  color: var(--base);
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.base-text, p {
+  font-size: var(--base-text);
+  line-height: 19px;
+}
+
+.small-text {
+  font-size: var(--small-text);
+  line-height: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 340px;
+  height: 48px;
+
+  padding: 14px;
+  
+  background: var(--white);
+  border: 1px solid var(--secondary);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  color: var(--primary);
+  font-size: var(--base-text);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+textarea {
+  height: 123px;
+  resize: none;
+}
+
+button {
+  height: 48px;
+  font-size: var(--base-text);
+  
+  display: block;
+  border: none;
+  border-radius: 4px;
+}
+
+button.big-button {
+  width: 280px;
+
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+button.small-button {
+  width: 86px;
+  box-sizing: border-box;
+  
+  border: 2px solid var(--primary);
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+button.small-button:hover, button.small-button:focus {
+  filter: brightness(90%);
+}
+
+button.big-button:hover, button.big-button:focus {
+  background-color: var(--dark-primary);
+}
+
+/*--------------Other styles--------------*/
+
+
