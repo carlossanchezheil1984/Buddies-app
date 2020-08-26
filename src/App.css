@@ -1,4 +1,3 @@
-
 /*--------------Importing the Roboto Font--------------*/
 
 @font-face {
@@ -21,6 +20,7 @@
   /*Colors*/
   --primary: #6F52ED;
   --dark-primary: #452CAE;
+  --background: #E5E5E5;
   --secondary: #A6ACBE;
   --base: #333333;
   --light: #F8F8FB;
@@ -31,6 +31,9 @@
 }
 
 /*--------------Main styles--------------*/
+body {
+  background-color: var(--background);
+}
 
 body * {
   font-family: var(--font);
@@ -40,9 +43,8 @@ body * {
 header{
   height: 100px;
   border-bottom: 2px solid var(--secondary);
+  background-color: var(--white);
 }
-
-
 
 .header-flex-container{
   display: flex;
@@ -63,6 +65,31 @@ header{
   font-weight: bold;
   justify-content: center;
   align-items: center;
+}
+
+.homepage {
+  height: 100vh;
+}
+
+.homepage h1 {
+  margin-top: 122px;
+}
+
+.homepage h2 {
+  margin-top: 22px;
+}
+
+.homepage-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin:auto;
+}
+
+.homepage-button-container {
+  margin-top: 82px; 
+  display: flex;
+  justify-content: space-between;
 }
 
 .small-buttons-container{
@@ -166,3 +193,9 @@ button.big-button:hover, button.big-button:focus {
 
 /*--------------Other styles--------------*/
 
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5% 30%;
+}
