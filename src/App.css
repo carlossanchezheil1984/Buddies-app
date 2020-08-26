@@ -6,6 +6,7 @@
   font-weight: normal;
 }
 
+
 /*--------------CSS Variables--------------*/
 
 :root {
@@ -34,6 +35,41 @@ body * {
   font-family: var(--font);
   color: var(--base);
 }
+
+header{
+  height: 100px;
+  border-bottom: 2px solid var(--secondary);
+}
+
+
+
+.header-flex-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  
+}
+
+.logo{
+  height: 100%;
+  width: 115px;
+  display: flex;
+  background-color: var(--primary);
+  color : var(--white);
+  font-size: 48px;
+  text-align: center;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-buttons-container{
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 
 h1 {
   font-size: 36px;
@@ -123,5 +159,4 @@ button.big-button:hover, button.big-button:focus {
 }
 
 /*--------------Other styles--------------*/
-
 
