@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button'
 
 const Header = () => {
     return(
@@ -7,8 +8,8 @@ const Header = () => {
                 <div className="logo">bb</div>
 
                 <div className="small-buttons-container">
-                <div>SmallButtonComponent</div>
-                <div>SmallButtonComponent</div>
+                <Button buttonType="small" text="Home" submitBtn="true" />
+                <Button buttonType="small" text="login" submitBtn="true" />
                 </div>
             </div>
 
