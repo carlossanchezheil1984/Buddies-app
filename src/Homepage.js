@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import Button from "./Button";
+
 
 const Homepage = () => {
     return (
@@ -11,8 +11,10 @@ const Homepage = () => {
                 <h2>Select buddy if you are a social service student</h2>
 
                 <div class="homepage-button-container">
-                    <Button buttonType="big" text="I am a buddy" />
-                    <Button buttonType="big" text="I want a buddy" />
+                
+                <a href="/BuddiesForm" className="button big-button">I am a buddy</a>
+                <a href="/StudentForm" className="button big-button">I want a buddy</a>
+                
                 </div>
             </div>
         </div>
