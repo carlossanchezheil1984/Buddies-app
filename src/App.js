@@ -1,8 +1,7 @@
 import React from 'react';
 import "./App.css";
 import BuddiesForm from "./BuddiesForm";
-import RegisterForm from "./RegisterForm";
-
+import StudentForm from "./StudentForm"
 import Homepage from './Homepage';
 import {
   BrowserRouter as Router,
@@ -23,6 +22,9 @@ function App(){
             </Route>
             <Route path="/BuddiesForm">
               <BuddiesForm/>
+            </Route>
+            <Route path="/StudentForm">
+              <StudentForm/>
             </Route>
             
           </Switch>

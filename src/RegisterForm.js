@@ -32,15 +32,13 @@ export default class Form extends React.Component {
             hometown: ""
         });
         console.log(this.state);
-        
     };
-
 
     //form function
     render() {
         return (
             <form>
-                <label htmlFor="name"> Naam en achternaam </label>
+                <label for="name"> Naam en achternaam </label>
                 
                 <input
                 name="name"
@@ -49,7 +47,7 @@ export default class Form extends React.Component {
                 onChange={e => this.setState({ name: e.target.value })}
                 required/>
 
-                <label htmlFor="birthDate"> Geboortedatum </label>
+                <label for="birthDate"> Geboortedatum </label>
 
                 <input
                 type="date"
@@ -60,7 +58,7 @@ export default class Form extends React.Component {
                 required/>
 
 
-                <label htmlFor="email">Email</label>
+                <label for="email">Email</label>
 
                 <input
                 type="email"
@@ -70,7 +68,7 @@ export default class Form extends React.Component {
                 onChange={e => this.change(e)} 
                 required/>
 
-                <label htmlFor="hobbies">Hobby's en interesses</label>
+                <label for="hobbies">Hobby's en interesses</label>
 
                 <input
                 name= "hobbies"
@@ -79,7 +77,8 @@ export default class Form extends React.Component {
                 onChange={e => this.change(e)} 
                 required/>
 
-                <label htmlFor="hometown"> Geboorteplaats</label>
+
+                <label for="hometown"> Geboorteplaats</label>
                 <input
                 name= "hometown"
                 placeholder="geboorteplaats"
@@ -87,9 +86,9 @@ export default class Form extends React.Component {
                 onChange={e => this.change(e)} 
                 required/>     
 
-                <button onClick={e=> this.onSubmit(e)} className="big-button">Indienen</button>
+                <button onClick={e=> this.onSubmit(e)}>Indienen</button>
+                
             </form>
         )
     }
-
 }

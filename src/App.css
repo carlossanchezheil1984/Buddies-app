@@ -58,17 +58,22 @@ header{
   height: 100%;
   width: 115px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: var(--primary);
   color : var(--white);
   font-size: 48px;
+
   text-align: center;
   font-weight: bold;
-  justify-content: center;
-  align-items: center;
+
+  cursor: pointer;
 }
 
-.homepage {
-  height: 100vh;
+.homepage, .container-form {
+  border: 2px solid red;
+  height: calc(100vh - 100px);
 }
 
 .homepage h1 {
@@ -172,6 +177,8 @@ button.big-button {
 
   color: var(--white);
   background-color: var(--primary);
+
+  cursor: pointer;
 }
 
 button.small-button {
@@ -197,5 +204,6 @@ button.big-button:hover, button.big-button:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   padding: 5% 30%;
 }
