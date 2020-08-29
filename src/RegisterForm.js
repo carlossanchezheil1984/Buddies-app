@@ -38,16 +38,16 @@ export default class Form extends React.Component {
     render() {
         return (
             <form>
-                <label for="name"> Naam en achternaam </label>
+                <label htmlFor="name"> Naam en achternaam </label>
                 
                 <input
                 name="name"
                 placeholder="Naam"
                 value={this.state.name}
                 onChange={e => this.setState({ name: e.target.value })}
-                required/>
+                />
 
-                <label for="birthDate"> Geboortedatum </label>
+                <label htmlFor="birthDate"> Geboortedatum </label>
 
                 <input
                 type="date"
@@ -58,7 +58,7 @@ export default class Form extends React.Component {
                 required/>
 
 
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
 
                 <input
                 type="email"
@@ -68,7 +68,7 @@ export default class Form extends React.Component {
                 onChange={e => this.change(e)} 
                 required/>
 
-                <label for="hobbies">Hobby's en interesses</label>
+                <label htmlFor="hobbies">Hobby's en interesses</label>
 
                 <input
                 name= "hobbies"
@@ -78,7 +78,7 @@ export default class Form extends React.Component {
                 required/>
 
 
-                <label for="hometown"> Geboorteplaats</label>
+                <label htmlFor="hometown"> Geboorteplaats</label>
                 <input
                 name= "hometown"
                 placeholder="geboorteplaats"
@@ -86,7 +86,7 @@ export default class Form extends React.Component {
                 onChange={e => this.change(e)} 
                 required/>     
 
-                <button onClick={e=> this.onSubmit(e)}>Indienen</button>
+                <a href="/ThanksYou" className="big-button" onClick={e=> this.onSubmit(e)}>Indienen</a>
                 
             </form>
         )

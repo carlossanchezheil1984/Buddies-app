@@ -5,7 +5,7 @@ const Button = props => {
     props.buttonType === "small" ? classname="small-button" : classname = "big-button";
 
     return (
-        <button className={classname}>{props.text}</button>
+        <a href={props.route} className={classname}>{props.text}</a>
     );
 }
 
