@@ -4,7 +4,6 @@ import "./App.css";
 import Header from './Header';
 import Homepage from './Homepage';
 import BuddiesForm from './BuddiesForm';
-import RegisterForm from "./RegisterForm";
 import StudentForm from './StudentForm';
 
 //Main Site

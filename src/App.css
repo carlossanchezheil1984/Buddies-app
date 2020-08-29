@@ -71,10 +71,6 @@ header{
   cursor: pointer;
 }
 
-.homepage, .container-form {
-  border: 2px solid red;
-  height: calc(100vh - 100px);
-}
 
 .homepage h1 {
   margin-top: 122px;
@@ -107,21 +103,25 @@ header{
   color : var(--primary);
   text-decoration: none;
   text-align: center;
-  margin-right: 44px;
+  margin-right: 10px;
 }
+
 h1 {
   font-size: 36px;
   line-height: 42px;
+  text-align: center;
 }
 
 h2 {
   font-size: 24px;
   line-height: 28px;
+  text-align: center;
 }
 
 h3 {
   font-size: 20px;
   line-height: 23px;
+  text-align: center;
 }
 
 .base-text, p {
@@ -136,7 +136,7 @@ h3 {
 
 label {
   display: block;
-  margin-bottom: 10px;
+  margin: 16px 0 10px 0;
 }
 
 input, textarea {
@@ -154,6 +154,10 @@ input, textarea {
   font-size: var(--base-text);
 }
 
+::placeholder {
+  color: var(--primary);
+}
+
 input:focus, textarea:focus {
   outline: none;
 }
@@ -163,16 +167,19 @@ textarea {
   resize: none;
 }
 
-button {
+a {
   height: 48px;
+  width: 86px;
+
   font-size: var(--base-text);
-  
-  display: block;
-  border: none;
   border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-button.big-button {
+.big-button {
   width: 280px;
 
   color: var(--white);
@@ -181,8 +188,7 @@ button.big-button {
   cursor: pointer;
 }
 
-button.small-button {
-  width: 86px;
+.small-button {
   box-sizing: border-box;
   
   border: 2px solid var(--primary);
@@ -190,20 +196,65 @@ button.small-button {
   color: var(--primary);
 }
 
-button.small-button:hover, button.small-button:focus {
+.small-button:hover, .small-button:focus {
   filter: brightness(90%);
 }
 
-button.big-button:hover, button.big-button:focus {
+.big-button:hover, .big-button:focus {
   background-color: var(--dark-primary);
 }
 
+/*----------------------------------------*/
 /*--------------Other styles--------------*/
+/*----------------------------------------*/
 
 .container-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 
-  padding: 5% 30%;
+  padding: 52px 0 98px 0; 
+}
+
+form {
+  margin-top: 42px;
+}
+
+.container-form h1, .container-form h2 {
+  margin: 16px 0 0 0;
+}
+
+.container-form a {
+  margin: 34px auto 0 auto;
+}
+
+/*-----------------------------------------*/
+/*--------------Media queries--------------*/
+/*-----------------------------------------*/
+
+/*------------For mobile devices------------*/
+@media screen and (max-width: 767px) {
+
+  .homepage h1 {
+    margin-top: 90px;
+  }
+
+  .homepage-button-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  a {
+    margin-top: 10px;
+  }
+
+
+  input {
+    width: 100%;
+    max-width: 340px;
+  }
+
+
+
 }

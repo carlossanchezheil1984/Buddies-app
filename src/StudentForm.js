@@ -5,8 +5,9 @@ import RegisterForm from './RegisterForm.js';
 const StudentForm = () => {
     return(
         <div className="container-form">
-        <h3> if you're a Student register here!</h3>
-        <RegisterForm />
+            <h1> I want a buddy</h1>
+            <h2>I want a social service student buddy</h2>
+            <RegisterForm />
         </div>
     )
 };
