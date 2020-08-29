@@ -1,24 +1,21 @@
 import React from 'react';
 import "./App.css";
-import RegisterForm from "./RegisterForm.js"
 
-import Header from "./Header.js"
-
-import Button from "./Button";
+import Header from './Header';
 import Homepage from './Homepage';
-
+import BuddiesForm from './BuddiesForm';
+import RegisterForm from "./RegisterForm";
+import StudentForm from './StudentForm';
 
 //Main Site
 function App(){
   return(
     <div className="App">
-
+      <Header />
       <Homepage />
 
-      <Button buttonType="small" text="Holiwis" submitBtn="true" />
-      <Button buttonType="big" text="Wuola" />
-
-      <RegisterForm />
+      <BuddiesForm />
+      <StudentForm />
     </div>
   );
 }
