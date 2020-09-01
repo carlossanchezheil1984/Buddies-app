@@ -3,6 +3,7 @@ import "./App.css";
 import BuddiesForm from "./BuddiesForm";
 import StudentForm from "./StudentForm"
 import Homepage from './Homepage';
+import ThankYou from './ThankYou';
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,6 +27,9 @@ function App(){
             </Route>
             <Route path="/StudentForm">
               <StudentForm/>
+            </Route>
+            <Route path="/ThankYou">
+              <ThankYou/>
             </Route>
            
           </Switch>

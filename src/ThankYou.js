@@ -1,11 +1,5 @@
 import React from 'react';
 import './App.css';
-import { render } from '@testing-library/react';
-
-
-goHome = () => {
-    
-}
 
 const Submit = () => {
     return(
