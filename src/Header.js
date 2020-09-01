@@ -8,7 +8,7 @@ const Header = () => {
                 <div className="logo">bb</div>
 
                 <div className="small-buttons-container">
-                <a className="button link" href="/home">Home</a>
+                <a className="button link" href="/">Home</a>
                 <Button route="#" buttonType="small" text="Login" submitBtn="true" />
                 </div>
             </div>
