@@ -5,7 +5,7 @@ const Header = () => {
     return(
         <header>
             <div className="header-flex-container">
-                <div className="logo">bb</div>
+                <a href="/" className=" logo">bb</a>
 
                 <div className="small-buttons-container">
                 <a className="button link" href="/">Home</a>
