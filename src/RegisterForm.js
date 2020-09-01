@@ -28,7 +28,6 @@ const RegisterForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(state);
     storeDataInDatabase(state);
   }
 
