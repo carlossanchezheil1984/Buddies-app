@@ -23,7 +23,7 @@ const RegisterForm = () => {
     localStorage.setItem('form_data', JSON.stringify(data));
     const myObjStr =  JSON.parse(localStorage.getItem('form_data'));
     console.log(myObjStr);
-    history.push('/ThanksYou');
+    history.push('/ThankYou');
   }
 
   const onSubmit = (e) => {

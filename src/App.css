@@ -167,7 +167,7 @@ textarea {
   resize: none;
 }
 
-a {
+a, button {
   height: 48px;
   width: 86px;
 
@@ -225,8 +225,31 @@ form {
   margin: 16px 0 0 0;
 }
 
-.container-form a {
+.container-form button {
   margin: 34px auto 0 auto;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  opacity: 0
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: url(https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/calendar-16.png) center/80% no-repeat;
+  color: rgba(0, 0, 0, 0);
+  opacity: 0.5
+}
+
+input[type=date] {
+  -moz-appearance: textfield;
+}
+
+.thank-you-container {
+  width: 500px;
+  border: 1px solid var(--success);
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 /*-----------------------------------------*/
