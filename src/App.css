@@ -245,11 +245,7 @@ input[type=date] {
 
 .thank-you-container {
   width: 500px;
-  border: 1px solid var(--success);
-  border-radius: 4px;
-
-  display: flex;
-  flex-direction: column;
+  height: calc(100vh - 104px);
 }
 
 /*-----------------------------------------*/
