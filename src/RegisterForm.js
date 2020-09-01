@@ -1,94 +1,85 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
+const RegisterForm = () => {
 
-//create the state
-export default class Form extends React.Component {
-    state = {
-        name: "",
-        birthDate: "",
-        email: "",
-        hobbies: "",
-        hometown: ""
-    };
+  const history = useHistory();
+  const [state, setState] = useState({
+    name: "",
+    birthDate: "",
+    email: "",
+    hobbies: "",
+    hometown: ""
+  });
 
-    //getting the values
+  //getting the values
 
-    change = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-    };
+  const onChange = (e) => {
+    let data = {...state};
+    data[e.target.name] = e.target.value;
+    setState(data);
+  };
+  const storeDataInDatabase = (data) => {
+    localStorage.setItem('form_data', JSON.stringify(data));
+    const myObjStr =  JSON.parse(localStorage.getItem('form_data'));
+    console.log(myObjStr);
+    history.push('/ThanksYou');
+  }
 
-    //Submit function
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(state);
+    storeDataInDatabase(state);
+  }
 
-    onSubmit = (e) => {
-        e.preventDefault();
+  //form function
+  return (
+    <form onSubmit={onSubmit}>
+      <label htmlFor="name"> Naam en achternaam </label>
+      <input
+      name="name"
+      placeholder="Naam"
+      value={state.name}
+      onChange={onChange}
+      required/>
 
-        this.setState({
-            name: "",
-            birthDate: "",
-            email: "",
-            hobbies: "",
-            hometown: ""
-        });
-        console.log(this.state);
-    };
+      <label htmlFor="birthDate"> Geboortedatum </label>
+      <input
+      type="date"
+      name="birthDate"
+      placeholder="geboortedatum"
+      value={state.birthDate}
+      onChange={onChange}
+      required/>
 
-    //form function
-    render() {
-        return (
-            <form>
-                <label htmlFor="name"> Naam en achternaam </label>
-                
-                <input
-                name="name"
-                placeholder="Naam"
-                value={this.state.name}
-                onChange={e => this.setState({ name: e.target.value })}
-                />
+      <label htmlFor="email">Email</label>
+      <input
+      type="email"
+      name= "email"
+      placeholder="email"
+      value={state.email}
+      onChange={onChange}
+      required/>
 
-                <label htmlFor="birthDate"> Geboortedatum </label>
+      <label htmlFor="hometown"> Geboorteplaats</label>
+      <input
+      name= "hometown"
+      placeholder="geboorteplaats"
+      value={state.hometown}
+      onChange={onChange}
+      required/>
 
-                <input
-                type="date"
-                name="birthDate"
-                placeholder="geboortedatum"
-                value={this.state.birthDate}
-                onChange={e => this.change(e)} 
-                required/>
+      <label htmlFor="hobbies">Hobby's en interesses</label>
+      <textarea
+      name= "hobbies"
+      placeholder="hobby's en interesses"
+      value={state.hobbies}
+      onChange={onChange}
+      required/>
 
-
-                <label htmlFor="email">Email</label>
-
-                <input
-                type="email"
-                name= "email"
-                placeholder="email"
-                value={this.state.email}
-                onChange={e => this.change(e)} 
-                required/>
-
-                <label htmlFor="hobbies">Hobby's en interesses</label>
-
-                <input
-                name= "hobbies"
-                placeholder="hobby's en interesses"
-                value={this.state.hobbies}
-                onChange={e => this.change(e)} 
-                required/>
-
-
-                <label htmlFor="hometown"> Geboorteplaats</label>
-                <input
-                name= "hometown"
-                placeholder="geboorteplaats"
-                value={this.state.hometown}
-                onChange={e => this.change(e)} 
-                required/>     
-
-                <a href="/ThanksYou" className="big-button" onClick={e=> this.onSubmit(e)}>Indienen</a>
-                
-            </form>
-        )
-    }
+      <button type="submit" className="big-button">Indienen</button>
+    </form>
+  )
 }
+
+export default RegisterForm;
