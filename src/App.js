@@ -19,7 +19,7 @@ function App(){
         
         <Router>
         <Switch>
-            <Route path="/home">
+            <Route exact path="/">
               <Homepage />
             </Route>
             <Route path="/BuddiesForm">
