@@ -28,26 +28,25 @@ const RegisterForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(state);
     storeDataInDatabase(state);
   }
 
   //form function
   return (
     <form onSubmit={onSubmit}>
-      <label htmlFor="name"> Naam en achternaam </label>
+      <label htmlFor="name">Name</label>
       <input
       name="name"
-      placeholder="Naam"
+      placeholder="Name"
       value={state.name}
       onChange={onChange}
       required/>
 
-      <label htmlFor="birthDate"> Geboortedatum </label>
+      <label htmlFor="birthDate"> Birthdate </label>
       <input
       type="date"
       name="birthDate"
-      placeholder="geboortedatum"
+      placeholder=""
       value={state.birthDate}
       onChange={onChange}
       required/>
@@ -56,28 +55,28 @@ const RegisterForm = () => {
       <input
       type="email"
       name= "email"
-      placeholder="email"
+      placeholder="Email"
       value={state.email}
       onChange={onChange}
       required/>
 
-      <label htmlFor="hometown"> Geboorteplaats</label>
+      <label htmlFor="hometown"> Hometown</label>
       <input
       name= "hometown"
-      placeholder="geboorteplaats"
+      placeholder="Hometown"
       value={state.hometown}
       onChange={onChange}
       required/>
 
-      <label htmlFor="hobbies">Hobby's en interesses</label>
+      <label htmlFor="hobbies">Hobbies and interests</label>
       <textarea
       name= "hobbies"
-      placeholder="hobby's en interesses"
+      placeholder="Hobbies and interests"
       value={state.hobbies}
       onChange={onChange}
       required/>
 
-      <button type="submit" className="big-button">Indienen</button>
+      <button type="submit" className="big-button">Send</button>
     </form>
   )
 }

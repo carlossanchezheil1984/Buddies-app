@@ -8,9 +8,9 @@ const StudentForm = () => {
         <div>
             <Header />
             <div className="container-form">
-            <h1> ik wil een maatje worden</h1>
-        <h2> Ik ben een student sociale dienst </h2>
-                <RegisterForm />
+            <h1> I want a buddy</h1>
+            <h2> I am a social service student </h2>
+            <RegisterForm />
             </div>
         </div>
     )

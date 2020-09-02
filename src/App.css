@@ -33,9 +33,6 @@
 /*--------------Main styles--------------*/
 body {
   background-color: var(--background);
-}
-
-body * {
   font-family: var(--font);
   color: var(--base);
 }
@@ -64,6 +61,7 @@ header{
   background-color: var(--primary);
   color : var(--white);
   font-size: 48px;
+  border-radius: 0;
 
   text-align: center;
   font-weight: bold;
@@ -243,9 +241,36 @@ input[type=date] {
   -moz-appearance: textfield;
 }
 
+.margin-auto {
+  margin: auto;
+}
+
 .thank-you-container {
-  width: 500px;
-  height: calc(100vh - 104px);
+  width: 100%;
+  max-width: 500px;
+
+  margin: 43px auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.success-container {
+  background-color: var(--success);
+  color: var(--white);
+  border-radius: 4px 4px 0 0;
+
+  padding: 50px 0 90px 0;
+}
+
+.contact-you-container {
+  background-color: var(--white);
+  border: 1px solid var(--success);
+
+  padding: 45px 89px;
 }
 
 /*-----------------------------------------*/
@@ -264,17 +289,46 @@ input[type=date] {
     align-items: center;
     margin-top: 50px;
   }
-  
+
+ 
   a {
+
     margin-top: 10px;
   }
 
-
-  input {
-    width: 100%;
-    max-width: 340px;
+  .logo {
+    margin-top: 0;
   }
 
+  input, textarea {
+    width: 100%;
+    max-width: 300px;
+  }
 
+  .thank-you-container {
+    max-width: 300px;
+  }
 
+  .success-container {
+    padding: 15px;
+  }
+
+  .contact-you-container {
+    padding: 30px 0;
+  }
+
+  .contact-you-container p {
+    padding: 0 15px;
+  }
+}
+
+/*------------For tablets------------*/
+@media screen and (max-width: 991px) {
+  .success-container {
+    padding: 20px 0;
+  }
+
+  .contact-you-container {
+    padding: 20px 20px;
+  }
 }
