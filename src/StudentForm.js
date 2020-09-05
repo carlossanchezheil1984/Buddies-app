@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import RegisterForm from './RegisterForm.js';
 import Header from './Header';
 
