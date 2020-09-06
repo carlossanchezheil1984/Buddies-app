@@ -18,15 +18,15 @@
   --base-text: 16px;
 
   /*Colors*/
-  --primary: #6F52ED;
-  --dark-primary: #452CAE;
+  --primary: #00A1E2;
+  --dark-primary: #0D82B1;
   --background: #E5E5E5;
   --secondary: #A6ACBE;
   --base: #333333;
-  --light: #F8F8FB;
+  --light: #F2F2F2;
   --white: #FFFFFF;
-  --success: #33D69F;
-  --error: #FB3939;
+  --success: #16BC84;
+  --error: #E72E2A;
   
 }
 
@@ -35,6 +35,7 @@ body {
   background-color: var(--background);
   font-family: var(--font);
   color: var(--base);
+  margin: 0;
 }
 
 header{
@@ -176,6 +177,8 @@ a, button {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+
+  border: 0;
 }
 
 .big-button {
@@ -196,7 +199,7 @@ a, button {
 }
 
 .small-button:hover, .small-button:focus {
-  filter: brightness(90%);
+  filter: brightness(95%);
 }
 
 .big-button:hover, .big-button:focus {
