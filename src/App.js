@@ -13,8 +13,6 @@ import {
 } from 'react-router-dom';
 import AdminTable from './AdminTable';
 
-
-
 //Main Site
 function App(){
   return(
@@ -38,7 +36,7 @@ function App(){
               <Login/>
             </Route>
             <Route path="">
-              <AdminTable />
+              <AdminTable/>
             </Route>
           </Switch>
       </Router>
