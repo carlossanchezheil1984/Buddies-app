@@ -4,11 +4,14 @@ import BuddiesForm from "./BuddiesForm";
 import StudentForm from "./StudentForm"
 import Homepage from './Homepage';
 import ThankYou from './ThankYou';
+import Login from './Login';
+
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom';
+import AdminTable from './AdminTable';
 
 
 
@@ -31,7 +34,12 @@ function App(){
             <Route path="/ThankYou">
               <ThankYou/>
             </Route>
-           
+            <Route path="/Login">
+              <Login/>
+            </Route>
+            <Route path="">
+              <AdminTable />
+            </Route>
           </Switch>
       </Router>
     </div>
