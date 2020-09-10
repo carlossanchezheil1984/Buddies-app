@@ -3,17 +3,20 @@ table {
     border-spacing: 0;
 }
 
+.buddy td {
+    background-color: $table-buddy-row;
+}
+
 th, td {
     text-align: center;
     height: 55px;
-    border: none;
 }
 
 thead {
     background-color: $white;
 }
 
-tr, thead {
+td, thead {
     border-bottom: 1px solid $secondary;
 }
 
@@ -27,9 +30,4 @@ tr, thead {
 
 .email-column, .hobbies-column, .buddy-column {
     width: 200px;
-}
-
-.buddy-row {
-    background-color: $table-buddy-row;
-    border-bottom: 1px solid black;
 }

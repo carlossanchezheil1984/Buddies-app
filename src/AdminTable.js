@@ -2,12 +2,12 @@ import React from 'react';
 import Header from './Header';
 
 const listOfPeople = [
-    { id: 1, name: "Ale", age: 21, email: "maya@coso.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching anime", buddy_patient: "buddy" },
-    { id: 2, name: "Andy", age: 22, email: "maya@coso.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching anime", buddy_patient: "buddy" },
-    { id: 3, name: "Bruce", age: 25, email: "maya@coso.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching anime", buddy_patient: "buddy" },
-    { id: 4, name: "Ki", age: 27, email: "maya@coso.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching anime", buddy_patient: "buddy" },
-    { id: 5, name: "Klim", age: 29, email: "maya@coso.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching anime", buddy_patient: "buddy" },
-    { id: 6, name: "Ruben", age: 20, email: "maya@coso.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching anime", buddy_patient: "buddy" }
+    { id: 1, name: "Ale", age: 21, email: "test@email.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching movies", buddy_patient: "buddy" },
+    { id: 2, name: "Andy", age: 22, email: "test@email.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching movies", buddy_patient: "patient" },
+    { id: 3, name: "Bruce", age: 25, email: "test@email.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching movies", buddy_patient: "buddy" },
+    { id: 4, name: "Ki", age: 27, email: "test@email.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching movies", buddy_patient: "patient" },
+    { id: 5, name: "Klim", age: 29, email: "test@email.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching movies", buddy_patient: "patient" },
+    { id: 6, name: "Ruben", age: 20, email: "test@email.com", hometown: "barcelona", hobbies: "dancing, singing, playing, watching movies", buddy_patient: "buddy" }
   ];
 
 const AdminTable = () => {
@@ -29,7 +29,7 @@ const AdminTable = () => {
                     </thead>
                     <tbody>
                         {listOfPeople.map( person => (
-                            <tr key={person.id}>
+                            <tr key={person.id} className={person.buddy_patient}>
                                 <td className="name-column">{person.name}</td>
                                 <td className="age-column">{person.age}</td>
                                 <td className="email-column">{person.email}</td>
