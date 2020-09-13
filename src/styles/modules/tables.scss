@@ -1,0 +1,33 @@
+table {
+    margin-top: 55px;
+    border-spacing: 0;
+}
+
+.buddy td {
+    background-color: $table-buddy-row;
+}
+
+th, td {
+    text-align: center;
+    height: 55px;
+}
+
+thead {
+    background-color: $white;
+}
+
+td, thead {
+    border-bottom: 1px solid $secondary;
+}
+
+.name-column, .hometown-column {
+    width: 130px;
+}
+
+.age-column {
+    width: 65px;
+}
+
+.email-column, .hobbies-column, .buddy-column {
+    width: 200px;
+}

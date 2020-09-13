@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import RegisterForm from './RegisterForm.js';
 import Header from './Header';
 const BuddiesForm = () =>  {
@@ -7,8 +6,8 @@ const BuddiesForm = () =>  {
             <div>
                 <Header />
                 <div className="container-form">
-                <h1> ik wil een maatje</h1>
-        <h2> Ik wil een studievriend van de sociale dienst </h2>
+                <h1> I want to be a buddy</h1>
+                <h2> I am a social service student </h2>
                 <RegisterForm />
             </div>
             </div>

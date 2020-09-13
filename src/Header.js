@@ -5,11 +5,11 @@ const Header = () => {
     return(
         <header>
             <div className="header-flex-container">
-                <div className="logo">bb</div>
+                <a href="/" className=" logo">bb</a>
 
                 <div className="small-buttons-container">
-                <a className="button link" href="/home">Home</a>
-                <Button route="#" buttonType="small" text="Login" submitBtn="true" />
+                <a className="button link" href="/">Home</a>
+                <Button route="/Login" buttonType="small" text="Login" submitBtn="true" />
                 </div>
             </div>
 
