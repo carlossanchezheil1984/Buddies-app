@@ -32,8 +32,13 @@ const RegisterForm = () => {
   }
 
   //form function
+
+  //setting the props for the buddy or patient boolean 
+  const hiddenBoolean = props => { return(props.text ) }
+
+
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} action="" method="POST">
       <label htmlFor="name">Name</label>
       <input
       name="name"
@@ -76,9 +81,13 @@ const RegisterForm = () => {
       onChange={onChange}
       required/>
 
+      <input name="hiddenBoolean" value={hiddenBoolean} className="hidden-input"/>
+
       <button type="submit" className="big-button">Send</button>
     </form>
   )
 }
+
+
 
 export default RegisterForm;
