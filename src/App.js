@@ -12,6 +12,7 @@ import {
 
 
 
+
 //Main Site
 function App(){
   return(
@@ -31,7 +32,8 @@ function App(){
             <Route path="/ThankYou">
               <ThankYou/>
             </Route>
-           
+            <Route path="/Modaltest">
+            </Route>
           </Switch>
       </Router>
     </div>
