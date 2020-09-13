@@ -9,7 +9,7 @@ const StudentForm = () => {
                 <div className="container-form">
                 <h1> I want a buddy</h1>
                 <h2> I am a social service student </h2>
-                <RegisterForm hiddenBoolean="1"/>
+                <RegisterForm boolean="0"/>
             </div>
         </div>
     )

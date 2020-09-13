@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-const RegisterForm = () => {
+const RegisterForm = (props) => {
 
   const history = useHistory();
   const [state, setState] = useState({
@@ -9,8 +9,10 @@ const RegisterForm = () => {
     birthDate: "",
     email: "",
     hobbies: "",
-    hometown: ""
+    hometown: "",
+    boolean: props.boolean
   });
+  console.log(props);
 
   //getting the values
 
@@ -32,9 +34,6 @@ const RegisterForm = () => {
   }
 
   //form function
-
-  //setting the props for the buddy or patient boolean 
-  const hiddenBoolean = props => { return(props.text ) }
 
 
   return (
@@ -81,11 +80,16 @@ const RegisterForm = () => {
       onChange={onChange}
       required/>
 
-      <input name="hiddenBoolean" value={hiddenBoolean} className="hidden-input"/>
+      <input name="hiddenBoolean" value={state.boolean && state.boolean } className="hidden-input"/>
 
       <button type="submit" className="big-button">Send</button>
     </form>
   )
+}
+
+
+
+export default RegisterForm;
 }
 
 
