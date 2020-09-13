@@ -31,3 +31,10 @@ td, thead {
 .email-column, .hobbies-column, .buddy-column {
     width: 200px;
 }
+
+.table-button-container {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
